@@ -846,6 +846,47 @@ section { padding: 96px 6%; position: relative; z-index: 2; }
 .project-card:hover .project-arrow svg { color: var(--gold); }
 
 /* ──────────────────────────────────────────
+   PROJECTS — SUBSECTIONS
+────────────────────────────────────────── */
+.projects-group { margin-top: 48px; }
+.projects-group + .projects-group { margin-top: 52px; }
+.projects-group .projects-grid { margin-top: 20px; }
+.projects-group-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.projects-group-label svg { width: 14px; height: 14px; }
+.live-dot-label {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 8px #4ADE80;
+  animation: breathe 2s ease-in-out infinite;
+}
+.live-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 9.5px; font-weight: 700;
+  color: #4ADE80;
+  background: rgba(74,222,128,0.12);
+  border: 1px solid rgba(74,222,128,0.3);
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.project-card:nth-child(5) .p-bg { background: linear-gradient(135deg, #120A2A, #2D0060); }
+
+/* ──────────────────────────────────────────
    CONTACT / LEAD GEN
 ────────────────────────────────────────── */
 .contact-bg {
@@ -1379,80 +1420,190 @@ footer {
 ════════════════════════════════════════ -->
 <section id="projects">
   <div class="section-inner">
-    <div class="section-eyebrow reveal">GitHub</div>
+    <div class="section-eyebrow reveal">Portfolio</div>
     <h2 class="section-title reveal">Featured <span>Projects</span></h2>
-    <p class="section-sub reveal">Open-source projects showcasing full-stack development skills.</p>
-    <div class="projects-grid">
+    <p class="section-sub reveal">Live deployments and open-source projects showcasing full-stack development skills.</p>
 
-      <a href="https://github.com/Thilina19/ceylon-cart-demo" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Ceylon Cart Demo project">
-        <div class="project-header">
-          <div class="p-bg"></div>
-          <div class="project-icon-wrap">
-            <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <!-- ── Live on Vercel ── -->
+    <div class="projects-group">
+      <div class="projects-group-label reveal">
+        <span class="live-dot-label" aria-hidden="true"></span> Live Deployments &nbsp;·&nbsp; Vercel
+      </div>
+      <div class="projects-grid">
+
+        <a href="https://the-gym-panadura.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="The Gym Panadura project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="22 12 18 12 15 20 9 4 6 12 2 12"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
           </div>
-        </div>
-        <div class="project-top">
-          <div class="project-name">Ceylon Cart Demo</div>
-          <div class="project-desc">Full e-commerce grocery delivery platform built for the Sri Lankan market with modern UX.</div>
-        </div>
-        <div class="project-bottom">
-          <div class="project-stack"><span class="stack-tag">Next.js</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Tailwind</span></div>
-          <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
-        </div>
-      </a>
-
-      <a href="https://github.com/Thilina19/zaara-tours-demo" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Zaara Tours Demo project">
-        <div class="project-header">
-          <div class="p-bg"></div>
-          <div class="project-icon-wrap">
-            <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.01 6.82 2 2 0 012 4.73h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 12a16 16 0 006.1 6.1l.77-.77a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 19.73z"/><path d="M14.05 2a9 9 0 018 7.94M14.05 6A5 5 0 0118 10"/></svg>
+          <div class="project-top">
+            <div class="project-name">The Gym Panadura</div>
+            <div class="project-desc">Premium strength &amp; conditioning facility website for a Sri Lankan gym.</div>
           </div>
-        </div>
-        <div class="project-top">
-          <div class="project-name">Zaara Tours Demo</div>
-          <div class="project-desc">Travel &amp; tours booking platform with modern UI, designed for the Sri Lankan tourism market.</div>
-        </div>
-        <div class="project-bottom">
-          <div class="project-stack"><span class="stack-tag">Next.js</span><span class="stack-tag">TypeScript</span></div>
-          <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
-        </div>
-      </a>
-
-      <a href="https://github.com/Thilina19/petrol-lk-news" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Petrol LK News project">
-        <div class="project-header">
-          <div class="p-bg"></div>
-          <div class="project-icon-wrap">
-            <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 22v-1a4 4 0 014-4h10a4 4 0 014 4v1M12 3v14M9 7l3-3 3 3"/></svg>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
           </div>
-        </div>
-        <div class="project-top">
-          <div class="project-name">Petrol LK News</div>
-          <div class="project-desc">Real-time Sri Lanka fuel price tracker — keeping citizens informed on pump prices.</div>
-        </div>
-        <div class="project-bottom">
-          <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">JavaScript</span></div>
-          <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
-        </div>
-      </a>
+        </a>
 
-      <a href="https://github.com/Thilina19" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="View all GitHub projects">
-        <div class="project-header">
-          <div class="p-bg"></div>
-          <div class="project-icon-wrap">
-            <svg class="project-icon-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        <a href="https://magnum-dental-clinic-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Magnum Dental Clinic Demo project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
           </div>
-        </div>
-        <div class="project-top">
-          <div class="project-name">More on GitHub</div>
-          <div class="project-desc">View all repositories including AI tools, web experiments, and trading bots.</div>
-        </div>
-        <div class="project-bottom">
-          <div class="project-stack"><span class="stack-tag">github.com/Thilina19</span></div>
-          <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
-        </div>
-      </a>
+          <div class="project-top">
+            <div class="project-name">Magnum Dental Clinic</div>
+            <div class="project-desc">Multi-location dental clinic website for a Dubai practice — 39+ treatments, online booking.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
 
+        <a href="https://cef-logistic-demo.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="CEF Logistics Demo project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
+          </div>
+          <div class="project-top">
+            <div class="project-name">CEF Logistics</div>
+            <div class="project-desc">End-to-end freight forwarding &amp; logistics website — air, ocean &amp; inland cargo across 150+ countries.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+        <a href="https://maf-srilanka.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="MAF Sri Lanka project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
+          </div>
+          <div class="project-top">
+            <div class="project-name">MAF Sri Lanka</div>
+            <div class="project-desc">Official website for Sri Lanka's Mercantile Athletic Federation — corporate track &amp; field platform.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+        <a href="https://booklet-livid.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="MAF 2025 Sponsorship Booklet project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
+          </div>
+          <div class="project-top">
+            <div class="project-name">MAF 2025 Booklet</div>
+            <div class="project-desc">Digital sponsorship proposal for Sri Lanka's Mercantile Athletics Championship — corporate partnership packages.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+        <a href="https://website-bay-pi-78.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Zaara Tours Demo project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 7 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg>
+            </div>
+            <span class="live-badge">● Live</span>
+          </div>
+          <div class="project-top">
+            <div class="project-name">Zaara Tours</div>
+            <div class="project-desc">Travel &amp; tours booking platform with modern UI, designed for the Sri Lankan tourism market.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">Next.js</span><span class="stack-tag">TypeScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+      </div>
     </div>
+
+    <!-- ── GitHub Open Source ── -->
+    <div class="projects-group">
+      <div class="projects-group-label reveal">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:14px;height:14px"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        Open Source &nbsp;·&nbsp; GitHub
+      </div>
+      <div class="projects-grid">
+
+        <a href="https://github.com/Thilina19/ceylon-cart-demo" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Ceylon Cart Demo project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+          </div>
+          <div class="project-top">
+            <div class="project-name">Ceylon Cart Demo</div>
+            <div class="project-desc">Full e-commerce grocery delivery platform built for the Sri Lankan market with modern UX.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">Next.js</span><span class="stack-tag">TypeScript</span><span class="stack-tag">Tailwind</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+        <a href="https://github.com/Thilina19/petrol-lk-news" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="Petrol LK News project">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 22v-1a4 4 0 014-4h10a4 4 0 014 4v1M12 3v14M9 7l3-3 3 3"/></svg>
+            </div>
+          </div>
+          <div class="project-top">
+            <div class="project-name">Petrol LK News</div>
+            <div class="project-desc">Real-time Sri Lanka fuel price tracker — keeping citizens informed on pump prices.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">JavaScript</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+        <a href="https://github.com/Thilina19" target="_blank" rel="noopener noreferrer" class="project-card reveal" aria-label="View all GitHub projects">
+          <div class="project-header">
+            <div class="p-bg"></div>
+            <div class="project-icon-wrap">
+              <svg class="project-icon-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+          </div>
+          <div class="project-top">
+            <div class="project-name">More on GitHub</div>
+            <div class="project-desc">View all repositories including AI tools, web experiments, and trading bots.</div>
+          </div>
+          <div class="project-bottom">
+            <div class="project-stack"><span class="stack-tag">github.com/Thilina19</span></div>
+            <div class="project-arrow"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
